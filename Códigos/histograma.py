@@ -36,10 +36,10 @@ def main():
     print("Número de palabras en el cuento: " , len(words))
     
     # Histograma de las palabras del cuento, en orden de mayor a menor concurrencia
-    sorted_words = dict(sorted(words.items(), key=lambda item: item[1]))
+    sorted_words = dict(sorted(words.items(), key=lambda item: item[1], reverse=True))
     plt.bar(sorted_words.keys(), sorted_words.values())
     plt.xticks(rotation=90)
+    plt.tight_layout(pad=0.4, w_pad=10, h_pad=1.0)
     plt.show()
-    
     
 main()
